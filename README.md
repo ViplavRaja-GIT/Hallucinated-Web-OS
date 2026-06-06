@@ -5,7 +5,7 @@ Hallucinated Web OS transforms a traditional chat interaction into a dynamic des
 ---
 
 ## Demo
-<video src="final.mp4" controls width="640"></video>
+[Watch the demo video](./final.mp4)
 
 ## ✨ Features
 * Window-based user interface
