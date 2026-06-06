@@ -1,0 +1,135 @@
+.window {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+
+  box-shadow: var(--shadow-md);
+
+  color: var(--text-primary);
+
+  resize: both;
+  min-width: 350px;
+  min-height: 250px;
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.window-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.window-actions {
+  display: flex;
+  align-items: center;
+}
+
+.window-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 32px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--text-primary);
+
+  cursor: pointer;
+
+  transition: background 0.15s ease;
+}
+
+.window-action-btn:hover {
+  background: var(--surface-hover);
+}
+
+.window-close-btn:hover {
+  background: #e81123;
+  color: white;
+}
+
+.window-content {
+  flex: 1;
+  /* padding: 10px; */
+  overflow: hidden;
+}
+
+/* ---- Prompt Styling ----- */
+.suggestion-prompt-window {
+    width: auto;
+    min-height: 180px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.suggestion-prompt-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.suggestion-prompt-header p {
+    margin-top: 6px;
+    color: var(--text-secondary);
+}
+
+.suggestion-prompt-editor {
+    flex: 0;
+}
+
+.suggestion-prompt-input {
+    width: 100%;
+    min-width: 300px;
+    min-height: 180px;
+
+    resize: none;
+
+    padding: 18px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+
+    background: var(--surface-solid);
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.suggestion-prompt-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgb(0 120 212 / 15%);
+}
+
+.suggestion-prompt-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}

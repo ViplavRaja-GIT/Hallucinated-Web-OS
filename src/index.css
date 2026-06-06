@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Windows 11 Inspired Theme */
+
+:root {
+  /* Light Theme */
+  --background: #f3f3f3;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-solid: #ffffff;
+  --surface-hover: rgba(255, 255, 255, 0.9);
+
+  --text-primary: #1f1f1f;
+  --text-secondary: #616161;
+
+  --border: rgba(0, 0, 0, 0.08);
+
+  --accent: #0078d4;
+  --accent-hover: #106ebe;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark Theme */
+  --background: #202020;
+  --surface: rgba(44, 44, 44, 0.72);
+  --surface-solid: #2c2c2c;
+  --surface-hover: rgba(60, 60, 60, 0.9);
+
+  --text-primary: #ffffff;
+  --text-secondary: #c7c7c7;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --accent: #4cc2ff;
+  --accent-hover: #73d0ff;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family:
+    "Segoe UI",
+    Inter,
+    system-ui,
+    sans-serif;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Windows 11 Acrylic Card */
+.win-card {
+  background: var(--surface);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Buttons */
+.win-btn {
+  background: var(--surface-solid);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.win-btn:hover {
+  background: var(--surface-hover);
+}
+
+.win-btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.win-btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+/* Inputs */
+.win-input {
+  width: 100%;
+  background: var(--surface-solid);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+}
+
+.win-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgb(0 120 212 / 20%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.6);
+}
